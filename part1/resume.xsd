@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name = "stringtype">
+		<xs:restriction base = "xs:string"/>
+	</xs:simpleType>
+
+	<xs:simpleType name = "dayType">
+		<xs:restriction base = "xs:integer">
+			<xs:minInclusive value = "0"/>
+			<xs:maxInclusive value = "31"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name = "monthType">
+		<xs:restriction base = "xs:positiveInteger">
+			<xs:minInclusive value = "1"/>
+			<xs:maxInclusive value = "12"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name = "yearType">
+		<xs:restriction base = "xs:positiveInteger"/>
+	</xs:simpleType>
+
+	<xs:complexType name = "timeType">
+		<xs:sequence>
+			<xs:element name = "month" type = "monthType"/>
+			<xs:element name = "year" type = "yearType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name = "birthType">
+		<xs:sequence>
+			<xs:element name = "day" type = "dayType"/>
+			<xs:element name = "month" type = "monthType"/>
+			<xs:element name = "year" type = "yearType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name = "generalType">
+		<xs:sequence>
+			<xs:element name = "firstName" type = "stringtype"/>
+			<xs:element name = "lastName" type = "stringtype"/>
+			<xs:element name = "birth" type = "birthType"/>
+			<xs:element name = "city" type = "stringtype"/>
+			<xs:element name = "province" type = "stringtype"/>
+			<xs:element name = "country" type = "stringtype"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name = "educationType">
+		<xs:sequence>
+			<xs:element name = "schoolName" type = "stringtype"/>
+			<xs:element name = "program" type = "stringtype"/>
+			<xs:element name = "city" type = "stringtype"/>
+			<xs:element name = "province" type = "stringtype"/>
+			<xs:element name = "country" type = "stringtype"/>
+			<xs:element name = "begin" type = "timeType"/>
+			<xs:element name = "end" type = "timeType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name = "educationBackgroundType">
+		<xs:sequence>
+			<xs:element name = "education" type = "educationType" minOccurs = "1" maxOccurs = "5"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name = "workPlaceType">
+		<xs:sequence>
+			<xs:element name = "companyName" type = "stringtype"/>
+			<xs:element name = "position" type = "stringtype"/>
+			<xs:element name = "city" type = "stringtype"/>
+			<xs:element name = "province" type = "stringtype"/>
+			<xs:element name = "country" type = "stringtype"/>
+			<xs:element name = "begin" type = "timeType"/>
+			<xs:element name = "end" type = "timeType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name = "workExperienceType">
+		<xs:sequence>
+			<xs:element name = "workPlace" type = "workPlaceType" minOccurs = "1" maxOccurs = "5"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name = "resumeType">
+		<xs:sequence>
+			<xs:element name = "general" type = "generalType"/>
+			<xs:element name = "educationBackground" type = "educationBackgroundType"/>
+			<xs:element name = "workExperience" type = "workExperienceType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name = "resume" type = "resumeType"/>
+</xs:schema>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "resume.xsl"?>
+
+<resume>
+	<general>
+		<firstName>Rui</firstName>
+		<lastName>Wu</lastName>
+		<birth>
+			<day>23</day>
+			<month>10</month>
+			<year>1995</year>
+		</birth>
+		<city>Edmonton</city>
+		<province>Alberta</province>
+		<country>Canada</country>
+	</general>
+
+	<educationBackground>
+		<education>
+			<schoolName>University of Alberta</schoolName>
+			<program>Computer Engineering</program>
+			<city>Edmonton</city>
+			<province>Alberta</province>
+			<country>Canada</country>
+			<begin>
+				<month>09</month>
+				<year>2013</year>
+			</begin>
+			<end>
+				<month>06</month>
+				<year>2018</year>
+			</end>
+		</education>
+
+		<education>
+			<schoolName>Queen Elizabeth High Schoo</schoolName>
+			<program>Alberta High School Curriculum</program>
+			<city>Edmonton</city>
+			<province>Alberta</province>
+			<country>Canada</country>
+			<begin>
+				<month>09</month>
+				<year>2010</year>
+			</begin>
+			<end>
+				<month>06</month>
+				<year>2013</year>
+			</end>
+		</education>
+	</educationBackground>
+
+	<workExperience>
+		<workPlace>
+			<companyName>Weyerhauser Canada</companyName>
+			<position>COOP Student</position>
+			<city>Grande Prairie</city>
+			<province>Alberta</province>
+			<country>Canada</country>
+			<begin>
+				<month>1</month>
+				<year>2016</year>
+			</begin>
+			<end>
+				<month>09</month>
+				<year>2016</year>
+			</end>
+		</workPlace>
+
+		<workPlace>
+			<companyName>ABC</companyName>
+			<position>Student</position>
+			<city>Edmonton</city>
+			<province>Alberta</province>
+			<country>Canada</country>
+			<begin>
+				<month>06</month>
+				<year>2010</year>
+			</begin>
+			<end>
+				<month>12</month>
+				<year>2012</year>
+			</end>
+		</workPlace>
+
+	</workExperience>
+
+</resume>

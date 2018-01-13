@@ -1,0 +1,12 @@
+fieldset {
+	display: inline-block;
+	vertical-align: middle;
+	border: none;
+}
+
+.caption-container {
+	text-align: left;
+	padding: 2px 16px;
+	color: black;
+}
+

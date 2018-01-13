@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMP466 Assignment1</title>
+	<link rel="stylesheet" type="text/css" href="../shared/share.css">
+	<link rel="stylesheet" type="text/css" href="part3.css">
+
+	<script type="text/javascript" src = "picArray.js"></script>
+	<script type="text/javascript" src = "part3.js"></script>
+	<script type="text/javascript">
+		window.onload = start;
+	</script>
+
+</head>
+<body>
+	<header class="header">Assignment1 Part3</header>	
+	<nav class = "sideMenu">
+		<ul>
+			<li><a href="../tma1.htm">TMA1 Cover Page</a></li>
+		</ul>
+	</nav>
+
+	<div class = "content">
+		<canvas id = "myCanvas" width = '500' height = '500' style="border: 1px solid Black">
+			Your browser does not support the HTML5 canvas tag.
+		</canvas>
+
+		<div class = "caption-container">
+			<p>Caption: <span id = "caption"></span></p>
+
+		</div>
+
+		<p>
+			<fieldset>
+				<button id="startStop" onclick="updateStartStop()">Stop</button>
+			</fieldset>
+
+			<fieldset>
+				<input type="radio" name="sequence" id = "Random" onclick="updateSequence()">
+				<label>Random</label>
+				<br>
+				<input type="radio" name="sequence" id = "Sequential" checked="true" onclick="updateSequence()">
+				<label>Sequential</label>
+				<br>
+			</fieldset>
+
+			<fieldset>
+				<input type="radio" name="movement" id = "forward" checked="true" onclick="updateMovement()">
+				<label>Forward</label>
+				<br>
+				<input type="radio" name="movement" id = "backward" onclick="updateMovement()">
+				<label>Backward</label>
+				<br>			
+			</fieldset>
+
+			<fieldset>
+				<select id = 'transformation'>
+					<option value="plain">Plain</option>
+					<option value ="skewed">Skewed</option>
+					<option value="repeated">Reated</option>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<button id = "nextPicture" onclick="nextImage()">Next</button>
+				<br>
+				<button id = "previousPicture" onclick="previousImage()">Previous</button>
+
+			</fieldset>
+		</p>
+
+
+	</div>
+
+</body>
+</html>

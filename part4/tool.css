@@ -1,0 +1,21 @@
+.sideMenu li{
+	color: #000;
+	padding: 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.sideMenu li:hover{
+	background-color: #555;
+	color: black;
+}
+
+
+li.active{
+	background-color: #4CAF50;
+	color: white;
+}
+
+.cur {
+	width: 50px;
+}

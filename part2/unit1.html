@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMP466 Assignment1 Part2</title>
+	<link rel="stylesheet" type="text/css" href="../shared/share.css">
+	<link rel="stylesheet" type="text/css" href="unit.css">
+
+	<script type="text/javascript" src="units.js"></script>
+	<script type="text/javascript">
+		var currentPage = 'page1';
+		var pages = ['page1', 'page2', 'page3']; // If add more pages, need to add to here
+
+		function next(){
+			currentPage = nextPage(currentPage, pages);
+			if (currentPage == pages[pages.length-1]){
+				document.getElementById("nextButton").value = "Quiz";
+				document.getElementById("nextButton").onclick = function(){
+					window.location = "quiz1.html";
+				}	
+			}
+		}
+
+		function previous(){
+			currentPage = previousPage(currentPage, pages)
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<header class = "header">Assignment1 Part2 Unit1</header>
+
+	<nav class = "sideMenu">
+		<ul>
+			<li><a href = "main.html">Home</a></li>
+			<li><a class = "active" href = "unit1.html">Unit1</a></li>
+			<li><a href = "unit2.html">Unit2</a></li>
+			<li><a href = "unit3.html">Unit3</a></li>
+			<li><a href = "quiz1.html">Unit1 Quiz</a></li>
+			<li><a href = "quiz2.html">Unit2 Quiz</a></li>
+			<li><a href = "quiz3.html">Unit3 Quiz</a></li>
+		</ul>
+	</nav>
+
+	<div class = "content">
+		<h1>HTML(HyperText Markup Language) Tutorial</h1>
+		<div id = "page1">
+			<h2>HTML Basics</h2>
+
+			<h3>Headings</h3>
+			<p>Some text in an HTML4 document may be more important thatn other text. HTML5 provides six <b>heading elements</b>(h1 through h6) for specifying the relative importance of information.</p>
+
+			<p>Heading element <i>h1</i> is considered the most significant one and is typically rendered in a larger font than the other five. Each successive heading element(h2, h3, etc) is typically rendered in a progressively smaller font.</p>
+
+			<h3>Linking</h3>
+			<p>One of the most important HTML5 features is the <b>hyperlink</b>, which references(or links to) other resources. such as HTML5 documents and images.</p>
+
+			<p>When a user clicks a hyperlink, the browser tries to execute an action associated with it(e.g navigate to a URL). Any displayed element can act as a hyperlink. Web browsers typically underline text hyperlinks and color their text blue by default so that users can distinguish hyperlinks from plain text.</p>
+
+			<h3>Forms</h3>
+			<p>When browsing websites, users often need to provide information such as search queries, e-mail addresses and zip codes. HTML5 provides a mechanism, called a <b>form</b>, for collecting data from a users.</p>
+
+			<p>Data that users enter on a web page is normally sent to a web server that provides access to a site's resources. When a browser requests a publicly available web page of file that's located on a server, the server processes the request and returns the requested resource. A request contains the name and path of the desired resource and the protocol.</p>
+
+		</div>
+
+		<div id = "page2" style="display: none;">
+			<h2>HTML Input Types</h2>
+
+			<h3>Input type: <i>Color</i></h3>
+			The <i>color input</i> type enables the user to enter a color. Most browsers render the <i>color input</i> type as a text field in which the user can enter a hexadecimal code or a color name.
+
+			<h3>Input type: <i>date</i></h3>
+			The <i>date input</i> type enables user to enter a data in the form yyyy-mm-dd, allowing user to enter a date.
+
+			<h3>Input type: <i>datatime</i></h3>
+			The <i>datetime input</i> type enables the user to enter a date(year, month, day), time(hour, minute, second, fraction of a second) and the time zone set to UTC. Currently, most of the browsers render <i>datetime</i> as a text field;
+
+			<h3>Input type: <i>email</i></h3>
+			<p>The <i>email input</i> type enales the user to enter an e-mail address or a list of e-mail addresses separated by commas. Currnetly, all of the browsers display a text field. If the user enters an invalid e-mail address and clicks the <b>Submit</b> button, a callout asking the user to enter an e-mail address is rendered pointing to the <i>input</i> element. HTML5 does not check whether an e-mail address entered by the user actually exists, rather it just validates that the e-mail address is in the proper format.</p>
+
+			<h3>Input type: tel</h3>
+			<p>The <i>tel input</i> type enables the user to enter a telephone number. The tel input type is rendered as a text field in all of the browsers. The length and format of telephone numbers varies greatly based on location, making validation quite complex</p>
+
+			<p>HTML5 does not self validate the <i>tel input</i> type. To ensure that the user enters a phone number in a proper format, we've added a <i>pattern</i> attribute that uses a regular expression to determine whether the number is in the correct format.</p>
+
+			<h3>Input type: url</h3>
+			<p>The <i>url input</i> type enables the user to enter a URL. The element is rendered as a text field. If the user enters an improperly formatted URL, the URL will not validate. HTML5 does not check whether the URL entered is valid; rather it validates that the URL entered is in the proper format.</p>
+
+		</div>
+
+		<div id = "page3" style="display: none;">
+			<h2>Page-Structure Elements</h2>
+
+			<h3>header Element</h3>
+			<p>The <b>header</b> element creates a header for this page that contains both text and graphics. The <i>header</i> element can be used multiple times on a page and include HTML headings, navigation, images and logos and more.</p>
+
+			<h3>nav Element</h3>
+			<p>The <b>nav</b> element groups navigation links.</p>
+
+			<h3>figure Element and figcaption Element</h3>
+			<p>The <b>figure</b> element describes a figure(such as an image, chart or table) in the document so that it could be moved to the side of the page or to another page.</p>
+
+			<p>The <b>figcaption</b> elemnet provides a caption for the image in the <i>figure</i> element</p>
+
+			<h3>aside Element</h3>
+			<p>The <b>aside</b> element describes content that's related to the surrounding content but is somewhat separate from the flow of the text</p>
+
+			<h3>meter Element</h3>
+			<p>The <b>meter</b> element renders a visual representation of a measure with a range.</p>
+
+			<h3>footer Element</h3>
+			<p>The <b>footer</b> element describes a footer, content that usually appears at the bottom of the content or section elment.</p>
+
+		</div>
+
+
+		<form>
+			<input type="button" id = "nextButton" class = "button" name="next page" value = "Next" onclick="next();">
+			<input type="button" id = "previousButton" class = "button" name="previous page" value = "Previous" onclick="previous()"> 
+
+		</form>
+	</div>
+
+	<div class = "footer">COMP466 Assignment1</div>
+
+</body>
+</html>

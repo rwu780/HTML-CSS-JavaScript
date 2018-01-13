@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMP466 Assignment1</title>
+	<link rel="stylesheet" type="text/css" href="../shared/share.css">
+	<link rel="stylesheet" type="text/css" href="unit.css">
+
+	<script type="text/javascript" src="quiz3.js"></script>
+	<script type="text/javascript" src="quiz.js"></script>
+	<script type="text/javascript">
+		window.onload = start;
+	</script>
+</head>
+<body>
+	<header class="header">Assignment1 Part2 Quiz3</header>
+
+	<nav class = "sideMenu">
+		<ul>
+			<li><a href = "main.html">Home</a></li>
+			<li><a href = "unit1.html">Unit1</a></li>
+			<li><a href = "unit2.html">Unit2</a></li>
+			<li><a href = "unit3.html">Unit3</a></li>
+			<li><a href = "quiz1.html">Unit1 Quiz</a></li>
+			<li><a href = "quiz2.html">Unit2 Quiz</a></li>
+			<li><a class = "active" href = "quiz3.html">Unit3 Quiz</a></li>
+		</ul>
+	</nav>
+
+	<div class = "content">
+		<div id = "quizContent">
+			<div id = "question">Questions here</div>
+			<input type="radio" name="option" value = "1">
+			<label id = "option1">Answer1</label>
+			<br>
+			<input type="radio" name="option" value = "2">
+			<label id = "option2">Answer2</label>
+			<br>
+			<input type="radio" name="option" value = "3">
+			<label id = "option3">Answer3</label>
+			<br>
+			<input type="radio" name="option" value = "4">
+			<label id = "option4">Answer4</label>
+			<br>
+		</div>
+
+		<p id = "correctAnswer" style="display: none;">Correct Answer: <span id = "ans"></span></p>
+
+		<div id = "result" style="display: none;">
+			<p>Show result here</p>
+		</div>
+
+		<button id = "nextButton" class = "button" onclick="nextQuestion()">Next Question</button>
+	</div>
+</body>
+</html>

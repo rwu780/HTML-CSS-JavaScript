@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMP466 Assignment1 Part2</title>
+	<link rel="stylesheet" type="text/css" href="../shared/share.css">
+	<link rel="stylesheet" type="text/css" href="unit.css">
+
+	<script type="text/javascript" src="units.js"></script>
+	<script type="text/javascript">
+		var currentPage = 'page1';
+		var pages = ['page1', 'page2', 'page3']; // If add more pages, need to add to here
+
+		function next(){
+			currentPage = nextPage(currentPage, pages);
+			if (currentPage == pages[pages.length-1]){
+				document.getElementById("nextButton").value = "Quiz";
+				document.getElementById("nextButton").onclick = function(){
+					window.location = "quiz3.html";
+				}
+
+			}
+		}
+
+		function previous(){
+			currentPage = previousPage(currentPage, pages)
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<header class="header">Assignment1 Part2 Unit3</header>
+
+	<nav class = "sideMenu">
+		<ul>
+			<li><a href = "main.html">Home</a></li>
+			<li><a href = "unit1.html">Unit1</a></li>
+			<li><a href = "unit2.html">Unit2</a></li>
+			<li><a class = "active" href = "unit3.html">Unit3</a></li>
+			<li><a href = "quiz1.html">Unit1 Quiz</a></li>
+			<li><a href = "quiz2.html">Unit2 Quiz</a></li>
+			<li><a href = "quiz3.html">Unit3 Quiz</a></li>
+		</ul>
+	</nav>
+
+	<div class = "content">
+		<h1>JavaScript Tutorial</h1>
+		<div id = "page1">
+			<h2>JavaScript Introduction</h2>
+			<p>
+				<b>JavaScript scripting language</b>, which is used to enhance the functionality and appearance of web pages. Our treatement of JavaScript serves two purposes, it introduces client-side scripting, which makes web pages more dynamic and interactive, and it provides the programming foundation for the server-side.<br>
+
+				<p>Before you can run code with JavaScript on your computer, you may need to change your browser's security settings to allow scripts to run in files on your computer</p>
+			</p>
+
+			<h3>Memory Concepts</h3>
+			<p>
+				Variable names such as <i>number1</i> and <i>sum</i> actually correspond to <b>locations</b> in the computer's memory. Every variable has a <b>name</b>, a <b>type</b> and a <b>value</b>.
+			</p>
+
+			<p>
+				Unlike its predecessor languages C, C++ and Java, JavaScript does not require variables to have a declared type before they can be used in a script. A variable in JavaScript can contain a value of any data type, and in many situations JavaScript automatically converts between values of different types for you. For this reason, JavaScript is referred to as a <b>loosely typed language.</b>. <br>
+
+				When a variable is declared in JavaScript, but is not given a value, the variable has an <b>undefined</b> value. Attempting to use the value of such a variable is normally a logic error. When variables are declared, they're not assigned values unless you specify them. Assigning the value null to a variable indicates that it does not contain a value.
+			</p>
+
+			<h3>Arithmetic</h3>
+			<p>
+				Many scripts perform arithmetic calculations. Note the use of various special symbols not used in algebra. The asterisk(*) indicates multiplications; the percent sign(%) is the reminder operator
+			</p>
+
+			<p>
+				JavaScript applies the operators in arithmetic expressions in a percise sequence determined by the following <b>rule of operator precedence</b>, which are generally the same as those followed in algebra<br>
+				1.Multiplication, divsion and remainder operations are applied first. If an expression contains several multiplication, division and remainder operations, operators are applied from left to right. <br>
+				2.Addition and subtration operations are applied next. If an expression contains several addition and subtraction operations, operators are applied form left to right. Addition and subtraction operations have the same level of precedence.
+
+			</p>
+
+			<h3>Decision Making: Equality and Relational Operators</h3>
+			<p>
+				JavaSciprt's <b>if statement</b> that allows a script to make a decision based on the truth or falsity of a condition. Conditions in <i>if</i> statements can be formed by using the <b>equality operators</b> and <b>relational operators</b>. 
+				<br>
+				The relational operators all have the same level precedence and associate from left to right
+				<br>
+				The equality operators also associate from left to right. Each comparision results in a value of true or false
+
+			</p>
+
+		</div>
+
+		<div id = "page2" style="display: none;">
+			<h2>JavaScript Functions</h2>
+
+			<h3>Program Modules in JavaScript</h3>
+			<p>
+				Scripts that you write in JavaScript typically contain of one or more pieces called <b>functions</b>. You'll combine new functions that you write with prepackaged functions and objects available in JavaScript. The prepackaged functions that belong to JavaScript objects are called <b>methods</b>
+			</p>
+
+			<p>You can write functions to define tasks that may be used at many points in a script. These are referred to as <b>programmer-defined functions</b>. The actual actual statements defining the function are written only once and are hidden from other functions</p>
+
+			<p>A function is <b>invoked</b> by a <b>function call</b>. Functions are invoked by writing the name of the function, followed by a left paranthesis, followed by a comma-separated list of zero or more arguments, followed by a right parenthesis.</p>
+
+			<h3>Function Definitions</h3>
+			<p>
+				The function-name is any valide identifies.<br>
+				The parameter-list is a comma-separated list containing the names of the parameters received by the function when it's called. If a function does not receive any values, the parameter-list is empty.<br>
+				The declarations and statements between the braces form the <b>function body</b>
+			</p>
+
+			<p>
+				There are three ways to return control to the point at which a function was invoked. If the function does not return a result, control returns when the program reaches the function-ending right brace(}) or simply
+				<br>
+				<code>return;</code>
+				<br>
+				If the function does return a result, the statement
+				<br>
+				<code>return expression;</code>
+				<br>
+				returns the value of expression to the caller. When a return statement executes, control returns immediately to the point at which the function was invoked;
+			</p>
+
+			<h3>Scope Rules</h3>
+			<p>
+				The <b>scope</b> of an identifies for a variable or function is the portion of the program in which the identifier can be referenced. <b>Global variables</b> that are declared in the head element are accessible in any part of a script and said to have 
+				<br>
+				<b>global scope</b>. Thus every function in the page's script(s) can potentially use the variables.
+				<br>
+				Identifiers declared inside a function have <b>function(or local) scope</b> and can be used only in that function. Function scope begins with the opening left brace({) of the function in which the identifier is declared and ends at the function's terminating right brace(}). Local variables of a function and function parameters have function scope. If a local variable in a function has the same name as a global variable, the global variable is "hidden" from the body of the function.
+			</p>
+
+		</div>
+
+		<div id = "page3" style="display: none;">
+			<h2>Javascript Object</h2>
+
+			<h3>Math Object</h3>
+			<p>
+				The <b>Math</b> object's methods enable you to conveniently perform many common mathematical calculations.
+			</p>
+
+			<h3>Date Object</h3>
+			<p>
+				JavaScript's <b>Date</b> object provides methods for date and time manipulations. These can be performed based on the computer's <b>local time zone</b> or based on World Time Standard's <b>Coordinated Universal Time(TTC)</b>
+			</p>
+
+			<h3>Boolean and Number Objects</h3>
+			<p>
+				JavaScript provides the <b>Boolean</b> and <b>Number</b> objects as <b>object wrappers</b> for boolean true/false values and numbers, respectively. These wrappers define mthods and properties useful in manipulating boolean values and numbers.
+			</p>
+
+			<p>
+				When a JavaScript program requires a boolean vlaue, JavaScript automatically creates a <i>Boolean</i> object to store the value
+				<br>
+				The boolear Value specifies whether the Boolean obejct should contain true or false. If boolean value is false, 0, null, Number.NAN or an empty string(""), or if no argument is supplied, the new Boolean object contains false. Otherwise, the new Boolean object contains true.
+			</p>
+
+			<p>
+				JavaScript automatically creates Number objects to store numeric values in a script.
+			</p>
+
+			<h3>document Object</h3>
+			<p>
+				The <b>document</b> object, which we've used extensively, is provided by the browser and allows JavaScript code to manipulate the current document in the browser. The <i>document</i> object has several properties and methods.
+			</p>
+
+
+		</div>
+
+		<form>
+			<input type="button" class="button" id = "nextButton" name="next page" value = "Next" onclick="next();">
+			<input type="button" class="button" id = "previousButton" name="previous page" value = "Previous" onclick="previous()"> 
+
+		</form>
+	</div>
+
+	<div class = "footer">COMP466 Assignment1</div>
+
+</body>
+</html>

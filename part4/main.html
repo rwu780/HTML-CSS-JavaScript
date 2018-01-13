@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMP466 Assignment1</title>
+	<link rel="stylesheet" type="text/css" href="../shared/share.css">
+	<link rel="stylesheet" type="text/css" href="tool.css">
+
+	<script type="text/javascript" src = "tool.js"></script>
+
+</head>
+<body>
+	<header class="header">Assignment1 Part4</header>
+	<nav class = "sideMenu">
+		<ul>
+			<li><a href="../tma1.htm">TMA1 Cover Page</a></li>
+			<li class = "active" id = "measurementConverterList">Measurement Converters</li>
+			<li id = "mortgageCalculatorList">Mortgage Calculator</li>
+			<li id = "currencyConverterList">Currency Converter</li>
+		</ul>
+	</nav>
+	<div class="content">
+		<div id = "test">
+			
+		</div>
+
+		<div id="measurementConverter">
+			<h1>Measurement Converters</h1>
+			<p>
+				<input type="number" step = 0.01 id="weightKG"> kg equivalent to 
+				<input type="number" step = 0.01 id="weightLB"> lb
+			</p>
+
+			<p>
+				<input type="number" step = 0.01 id="heightcm"> cm equivalent to 
+				<input type="number" step = 0.01 id="heightft"> Ft
+			</p>
+
+			
+			<p>
+				<input type="number" step = 0.01 id="areaMeter"> m^2 equivalent to 
+				<input type="number" step = 0.01 id="areaFeet"> Square Feet
+			</p>
+
+			<p>
+				<input type="number" step = 0.01 id="volumneMeter"> m^3 equivalent to 
+				<input type="number" step = 0.01 id="volumneFeet"> Cubic Feet
+			</p>
+
+		</div>
+
+		<div id = "mortgageCalculator" style="display: none;">
+			<h1>Mortgage Calculator</h1>
+
+			<p>
+				Mortgage Amount: $<input type="number" step=0.01 id="mortgageAmount"> 
+				<br>
+				Years: <input type="number" min = "1"  max = "100" id="year"> Years
+				<br>
+				Payment Frequency:
+				<select id = 'frequency'>
+					<option selected="true">Monthly</option>
+					<option>Bi-Weekly</option>
+				</select>
+				<br>
+				Interest Rate: <input type="number" min="0" max="100" id="interestRate">%
+			</p>
+
+			<p>Your payment will be <span id = "payment"></span></p>
+
+		</div>
+
+		<div id = "currencyConverter" style="display: none;">
+			<h1>Currency Converter</h1>
+			<p>
+				<label>USD:</label>
+				<input type="number" step = 0.01 id = "USD">
+			</p>
+			<p>
+				<label>CAD:</label>
+				<input type="number" step = 0.01 id = "CAD">
+			</p>
+			<p>
+				<label>GBP:</label>
+				<input type="number" step = 0.01 id = "GBP">
+			</p>
+			<p>
+				<label>EUR:</label>
+				<input type="number" step = 0.01 id = "EUR">
+			</p>
+			<p>
+				<label>JPY:</label>
+				<input type="number" step = 0.00001 id = "JPY">
+			</p>
+
+		</div>
+	</div>
+
+</body>
+</html>

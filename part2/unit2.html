@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMP466 Assignment1 Part2</title>
+	<link rel="stylesheet" type="text/css" href="../shared/share.css">
+	<link rel="stylesheet" type="text/css" href="unit.css">
+
+	<script type="text/javascript" src="units.js"></script>
+	<script type="text/javascript">
+		var currentPage = 'page1';
+		var pages = ['page1', 'page2', 'page3']; // If add more pages, need to add to here
+
+		function next(){
+			currentPage = nextPage(currentPage, pages);
+			if (currentPage == pages[pages.length-1]){
+				document.getElementById("nextButton").value = "Quiz";
+				document.getElementById("nextButton").onclick = function(){
+					window.location = "quiz2.html";
+				}
+
+			}
+		}
+
+		function previous(){
+			currentPage = previousPage(currentPage, pages)
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<header class = "header">Assignment1 Part2 Unit2</header>
+
+	<nav class = "sideMenu">
+		<ul>
+			<li><a href = "main.html">Home</a></li>
+			<li><a href = "unit1.html">Unit1</a></li>
+			<li><a class = "active" href = "unit2.html">Unit2</a></li>
+			<li><a href = "unit3.html">Unit3</a></li>
+			<li><a href = "quiz1.html">Unit1 Quiz</a></li>
+			<li><a href = "quiz2.html">Unit2 Quiz</a></li>
+			<li><a href = "quiz3.html">Unit3 Quiz</a></li>
+		</ul>
+	</nav>
+
+	<div class = "content">
+		<h1>CSS(Cascading Style Sheet) Tutorial</h1>
+
+		<div id = "page1">
+			<h2>CSS Introduction</h2>
+			<p><b>Cascading Style Sheet3(CSS3)</b> that allows you to specify the presentation of elements on a web page separately from the document's structure and content. This separation of structure from presentation simplifies maintaining and modifying web pages, especially on large-scale websites.</p>
+
+			<h3>Inline Styles</h3>
+			<p>You can declare document styles inline in the HTML5 markup, in embedded style sheets or in separate CSS files. Inline styles override any other styles from embedded style sheets.</p>
+
+			<h3>Embedded Style Sheets</h3>
+			<p><b>Embedded Style Sheets</b>, enables you to embed a CSS3 document in an HTML5 document's <i>head</i> section</p>
+
+		</div>
+
+		<div id = "page2" style="display: none;">
+			<h2>Basic CSS</h2>
+
+			<h3>font-family Property</h3>
+			<p>
+				The <b>font-family</b> specifies the name of the font to use. Not all users have the same fonts insalled on their computers, so CSS allows you to specify a comma-separated list of fonts to use for a particular style. The browser attempts to use the fonts in the order in which they appear in the list.
+			</p>
+
+			<h3>font-size Property</h3>
+			<p>
+				The <b>font-size</b> property specifies the font size of your web. Generally, relative font-size values are preferred over points, because an author does not know the specific measurements of each client's display. Relative values permit more flexible viewing of web pages.
+			</p>
+			
+			<h3>background-image Property</h3>
+			<p>
+				The <b>background-image</b> property specifies the image URL for the background image. You can also set the <b>background-color</b> property in case the image is not found 
+			</p>
+
+			<h3>background-position Propert</h3>
+			<p>
+				The <b>background-position</b> property places the image on the page. The keywords top, bottom, center, left and right are used individually or in combination for vertical and horizontal positioning.
+			</p>
+
+		</div>
+
+		<div id = "page3" style="display: none;">
+			<h2>Advanced CSS</h2>
+
+			<h3>Box Model and Text Flow</h3>
+			<p>
+				All block-level elements have a virtual box drawn around them, based on what is known as the <b>box model</b>. When the browser renders an element using the box model, the content is surrounded by <b>padding</b>, a <b>border</b>, and a <b>margin</b>.
+			</p>
+			
+			<p>
+				The <b>margin</b> property sets the space between the outside of an element's border and all other content on the page
+			</p>
+			<p>
+				Margins for individual sides of an element can be specified by using properties <b>margin-top</b>, <b>margin-right</b>, <b>margin-left</b>, <b>margin-bottom</b>
+			</p>
+
+			<p>
+				The <b>padding</b> property determines the distance between the content inside an element and the inside of the element's border
+			</p>
+			<p>
+				Padding can be specified in the same way, using <b>padding-top</b>, <b>padding-right</b>, <b>padding-left</b>, <b>padding-bottom</b>
+			</p>
+
+			<h3>Media Types and Media Queries</h3>
+			<p>
+				CSS <b>media types</b> allow you to decide what a page should look like, depending on the kind of media being used to display the page. The most common media type for a web page is the <b><i>screen</i></b> media type, which is a standard computer screen. Other media types in CSS include <i>handheld</i>, <i>braille</i>, <i>speech</i> and <i>print</i>
+			</p>
+
+			<p>
+				The <i>handheld</i> medium is designed for mobile Internet devices such as smartphones; <br>
+
+				The <i>braille</i> is for machines that can read or print web pages in braille; <br>
+
+				The <i>speech</i> styles allow you to give a speech-synthesizing web browser more information about the content of a page; <br>
+
+				The <i>print</i> media type affects a web page's appearance when it's printed.<br>
+
+				Media types allow you to decide how a page should be presented on any one of these media without affecting the others.
+			</p>
+
+		</div>
+
+		<form>
+			<input type="button" id = "nextButton" class = "button" name="next page" value = "Next" onclick="next();">
+			<input type="button" id = "previousButton" class = "button" name="previous page" value = "Previous" onclick="previous()"> 
+
+		</form>
+	</div>
+
+	<div class = "footer">COMP466 Assignment1</div>
+
+</body>
+</html>
