@@ -3,82 +3,82 @@
 
 <resume>
 	<general>
-		<firstName>Rui</firstName>
-		<lastName>Wu</lastName>
+		<firstName>first</firstName>
+		<lastName>Last</lastName>
 		<birth>
-			<day>23</day>
+			<day>1</day>
 			<month>10</month>
-			<year>1995</year>
+			<year>1990</year>
 		</birth>
-		<city>Edmonton</city>
-		<province>Alberta</province>
-		<country>Canada</country>
+		<city>City</city>
+		<province>Provice</province>
+		<country>Country</country>
 	</general>
 
 	<educationBackground>
 		<education>
-			<schoolName>University of Alberta</schoolName>
+			<schoolName>University of XXXXX</schoolName>
 			<program>Computer Engineering</program>
-			<city>Edmonton</city>
-			<province>Alberta</province>
-			<country>Canada</country>
+			<city>City</city>
+			<province>Province</province>
+			<country>Country</country>
 			<begin>
-				<month>09</month>
-				<year>2013</year>
+				<month>xx</month>
+				<year>20xx</year>
 			</begin>
 			<end>
-				<month>06</month>
-				<year>2018</year>
+				<month>xx</month>
+				<year>20xx</year>
 			</end>
 		</education>
 
 		<education>
-			<schoolName>Queen Elizabeth High Schoo</schoolName>
-			<program>Alberta High School Curriculum</program>
-			<city>Edmonton</city>
-			<province>Alberta</province>
-			<country>Canada</country>
+			<schoolName>School Name</schoolName>
+			<program>Student program</program>
+			<city>city</city>
+			<province>province</province>
+			<country>country</country>
 			<begin>
-				<month>09</month>
-				<year>2010</year>
+				<month>xx</month>
+				<year>20xx</year>
 			</begin>
 			<end>
-				<month>06</month>
-				<year>2013</year>
+				<month>xx</month>
+				<year>20xx</year>
 			</end>
 		</education>
 	</educationBackground>
 
 	<workExperience>
 		<workPlace>
-			<companyName>Weyerhauser Canada</companyName>
-			<position>COOP Student</position>
-			<city>Grande Prairie</city>
-			<province>Alberta</province>
-			<country>Canada</country>
+			<companyName>Company</companyName>
+			<position>Intern</position>
+			<city>city</city>
+			<province>province</province>
+			<country>country</country>
 			<begin>
-				<month>1</month>
-				<year>2016</year>
+				<month>xx</month>
+				<year>20xx</year>
 			</begin>
 			<end>
-				<month>09</month>
-				<year>2016</year>
+				<month>xx</month>
+				<year>20xx</year>
 			</end>
 		</workPlace>
 
 		<workPlace>
 			<companyName>ABC</companyName>
 			<position>Student</position>
-			<city>Edmonton</city>
-			<province>Alberta</province>
-			<country>Canada</country>
+			<city>city</city>
+			<province>province</province>
+			<country>country</country>
 			<begin>
-				<month>06</month>
-				<year>2010</year>
+				<month>xx</month>
+				<year>20xx</year>
 			</begin>
 			<end>
-				<month>12</month>
-				<year>2012</year>
+				<month>xx</month>
+				<year>20xx</year>
 			</end>
 		</workPlace>
 
